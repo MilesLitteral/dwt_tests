@@ -1,0 +1,43 @@
+name: dwt-test
+version: 0.1.0.0
+github: githubuser/dwt_test
+license: BSD3
+author: Miles J. Litteral
+maintainer: "mandaloe2@gmail.com"
+copyright: "2021 Miles J. Litteral"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis: Manifold Valley Genetic Process Viewer 
+# category: Manifold
+# description: Please see the README on GitHub at <https://github.com/githubuser/FutharkExample#readme>
+
+default-extensions:
+  - OverloadedStrings
+  - ScopedTypeVariables
+  - UnicodeSyntax
+  - LinearTypes
+  - TemplateHaskell
+
+dependencies:
+  - base 
+  - linear-base
+  - JuicyPixels
+  - vector
+  - mtl
+
+library:
+  source-dirs: src
+
+executables:
+  dwt-alpha:
+    main: Main.hs
+    source-dirs: app/dxt
+    ghc-options:
+      - -threaded
+    dependencies:
+      - linear-base
+      - JuicyPixels
